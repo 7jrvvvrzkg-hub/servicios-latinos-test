@@ -183,17 +183,22 @@
   /* ===== Testimonials (rotating carousel) ===== */
   .testimonials{background:#fff; border-top:1px solid var(--line);}
   .testimonial-carousel{max-width:640px; margin:0 auto; text-align:center;}
-  .testimonial-track{position:relative; min-height:260px; touch-action:pan-y;}
+  .testimonial-track{
+    position:relative; height:320px; touch-action:pan-y; cursor:grab;
+    user-select:none;
+  }
+  .testimonial-track.dragging{cursor:grabbing;}
   .testimonial-slide{
     position:absolute; inset:0;
     opacity:0; visibility:hidden; transform:translateY(8px);
     transition:opacity .45s ease, transform .45s ease, visibility 0s linear .45s;
     border:1px solid var(--line); border-radius:16px; padding:32px 34px; background:var(--paper);
+    overflow-y:auto;
+    display:flex; flex-direction:column; justify-content:center;
   }
   .testimonial-slide.active{
     opacity:1; visibility:visible; transform:translateY(0);
     transition:opacity .45s ease, transform .45s ease;
-    position:relative;
   }
   .testimonial-stars{color:var(--gold); font-size:15px; letter-spacing:2px; margin-bottom:16px;}
   .testimonial-slide p.quote{font-size:16px; color:var(--ink); line-height:1.7; margin:0 0 22px; font-style:italic;}
@@ -217,7 +222,7 @@
   .testimonial-dot.active{background:var(--maroon); transform:scale(1.25);}
   @media (max-width:600px){
     .testimonial-slide{padding:26px 22px;}
-    .testimonial-track{min-height:300px;}
+    .testimonial-track{height:380px;}
   }
 
   /* ===== WhatsApp floating button ===== */

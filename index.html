@@ -789,6 +789,34 @@
           resetAutoplay();
         }
       }, { passive: true });
+
+      // Drag support for desktop (mouse)
+      var isDragging = false;
+      var dragStartX = 0;
+      var dragEndX = 0;
+
+      track.addEventListener('mousedown', function(e){
+        isDragging = true;
+        dragStartX = e.clientX;
+        track.classList.add('dragging');
+      });
+      window.addEventListener('mousemove', function(e){
+        if (!isDragging) return;
+        dragEndX = e.clientX;
+      });
+      window.addEventListener('mouseup', function(){
+        if (!isDragging) return;
+        isDragging = false;
+        track.classList.remove('dragging');
+        var delta = dragEndX - dragStartX;
+        if (Math.abs(delta) > 40) {
+          if (delta < 0) { next(); } else { prev(); }
+          resetAutoplay();
+        }
+        dragStartX = 0;
+        dragEndX = 0;
+      });
+      track.addEventListener('dragstart', function(e){ e.preventDefault(); });
     }
 
     startAutoplay();

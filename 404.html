@@ -334,19 +334,6 @@
       ctx.fillRect(0, H - GROUND_H, W, GROUND_H);
       ctx.fillStyle = GROUND_EDGE;
       ctx.fillRect(0, H - GROUND_H, W, 6);
-      ctx.save();
-      ctx.beginPath();
-      ctx.rect(0, H - GROUND_H + 6, W, GROUND_H - 6);
-      ctx.clip();
-      ctx.strokeStyle = 'rgba(0,0,0,0.08)';
-      ctx.lineWidth = 3;
-      for (var gx = -groundOffset; gx < W + 24; gx += 24) {
-        ctx.beginPath();
-        ctx.moveTo(gx, H - GROUND_H + 10);
-        ctx.lineTo(gx - 10, H);
-        ctx.stroke();
-      }
-      ctx.restore();
 
       // bird = the Servicios Latinos logo, tilted with velocity like classic flappy bird
       var d = bird.r * 2;

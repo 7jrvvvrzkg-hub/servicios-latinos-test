@@ -68,64 +68,21 @@
   <section class="content-section">
     <div class="wrap" style="text-align:center;">
       <div class="reveal" style="max-width:520px;margin:0 auto;">
+        <div class="game-wrap reveal" style="margin-bottom:40px;">
+          <canvas id="flyGame" width="360" height="480"></canvas>
+          <div class="game-overlay" id="gameOverlay">
+            <p class="game-score" id="gameScore">0</p>
+            <button class="btn btn-primary" id="gameStartBtn" data-i18n="nf.game_start">Jugar</button>
+            <p class="game-hint" data-i18n="nf.game_hint">Espacio, clic o toca la pantalla</p>
+          </div>
+        </div>
+
         <a href="index.html" class="btn btn-primary" style="display:inline-flex;margin-bottom:40px;">
           <span data-i18n="nf.home">Volver al inicio</span>
         </a>
 
-        <h3 data-i18n="nf.links_title" style="margin-bottom:20px;">¿Buscabas alguno de estos?</h3>
-        <div class="faq-accordion" style="text-align:left;">
-          <div class="faq-item">
-            <a href="seguros.html" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.seguros">Seguros</span>
-            </a>
-          </div>
-          <div class="faq-item">
-            <a href="taxes.html" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.taxes">Taxes</span>
-            </a>
-          </div>
-          <div class="faq-item">
-            <a href="trafico.html" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.trafico">Tráfico y Placas</span>
-            </a>
-          </div>
-          <div class="faq-item">
-            <a href="otros-servicios.html" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.otros">Otros Servicios</span>
-            </a>
-          </div>
-          <div class="faq-item">
-            <a href="index.html#oficinas" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.oficinas">Oficinas</span>
-            </a>
-          </div>
-          <div class="faq-item">
-            <a href="index.html#contacto" class="faq-question" style="text-decoration:none;color:inherit;display:flex;">
-              <span data-i18n="nav.contacto">Contacto</span>
-            </a>
-          </div>
-        </div>
-
         <p style="margin-top:36px;font-size:15px;color:var(--ink-soft);" data-i18n="nf.help">¿Necesitas ayuda? Llámanos al</p>
         <a href="tel:7575880623" style="font-size:20px;font-weight:700;color:var(--navy);">(757) 588-0623</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MINI GAME -->
-  <section class="content-section" style="background:var(--paper);">
-    <div class="wrap" style="text-align:center;">
-      <span class="eyebrow" data-i18n="nf.game_eyebrow" style="justify-content:center;">Mientras tanto</span>
-      <h2 class="section-title" data-i18n="nf.game_title" style="margin-bottom:8px;">¿Aburrido? Juega un rato.</h2>
-      <p style="color:var(--ink-soft);font-size:15px;margin-bottom:28px;" data-i18n="nf.game_sub">Toca, haz clic o presiona espacio para volar.</p>
-
-      <div class="game-wrap reveal">
-        <canvas id="flyGame" width="360" height="480"></canvas>
-        <div class="game-overlay" id="gameOverlay">
-          <p class="game-score" id="gameScore">0</p>
-          <button class="btn btn-primary" id="gameStartBtn" data-i18n="nf.game_start">Jugar</button>
-          <p class="game-hint" data-i18n="nf.game_hint">Espacio, clic o toca la pantalla</p>
-        </div>
       </div>
     </div>
   </section>
